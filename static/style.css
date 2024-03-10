@@ -1,0 +1,126 @@
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 30px);
+    grid-template-rows: repeat(var(--grid-rows), 30px);
+    /* Center the grid */
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden; /* Hide the overflow of the grid */
+    /*Add shadow to the grid */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden; /* Hide the overflow of the grid */
+    /* Add shadow to the grid */
+
+}
+
+.grid-cell {
+    border: 1px solid rgb(0, 0, 0);
+    width: 30px;
+    height: 30px;
+    overflow: hidden; /* Ensure the content does not overflow during scaling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    background-color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Common animation for all cell states */
+@keyframes scaleIn {
+    from {
+        transform: scale(0); /* Start from a scale of 0 */
+        border-radius: 50%; /* Start with rounded borders */
+    }
+    to {
+        transform: scale(1); /* Scale to full size */
+        border-radius: 0%; /* End with square borders */
+    }
+}
+
+.visited, .current, .path {
+    /* Initial state for animation */
+    transform: scale(0);
+    border-radius: 50%;
+
+    /* Animation properties */
+    animation: scaleIn 0.5s ease-in-out forwards; /* Use forwards to retain the final state */
+}
+
+.visited {
+    background-color: lightblue;
+}
+
+.current {
+    background-color: orange;
+}
+
+.path {
+    background-color: lightgreen;
+}
+
+.start-node {
+    background-color: rgb(229, 9, 245); /* Start node color */
+    border-radius: 20%; /* Make edges round */
+}
+
+.end-node {
+    background-color: rgba(255, 234, 2, 0.913); /* End node color */
+    border-radius: 20%; /* Make edges round */
+}
+
+
+.obstacle {
+    background-color: black; /* Obstacle color */
+    border-radius: 10%;
+}
+
+
+.toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;  
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.5); /* Set to 0.9 for slight transparency */
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-family: italic;
+
+}
+
+.toolbar select, .toolbar button{
+    font-size: 20px; /* Font size for the select element */
+    font-family: 'Arial'; /* Font family for the select element */
+}
+
+
+select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #e7e7e7;
+}
+
+body {
+    background-image: radial-gradient(circle, lightblue, white);
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+<div class="toolbar">
+    <img src="{{ url_for('static', filename='graph.png') }}" alt="Logo" style="height:50px; margin-right: 10px;">
+    <select id="algorithmSelector">
+        <option value="dijkstra">Dijkstra</option>
+        <option value="aStar">A*</option>
+        <option value="greedyBestFirst">Greedy Best First</option>
+    </select>
+    <button id="startButton" onclick="startSelectedAlgorithm()">Start</button>
+    <button onclick="resetGrid()">Clear Grid</button>
+    <button onclick="createMaze()">Create Maze</button>
+</div>
+
+<div id="grid-container"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    createGrid(20, 40); // Creates a 20x40 grid.
+});
+</script>
+
+</body>
+</html>
