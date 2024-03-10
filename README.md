@@ -12,12 +12,9 @@ PathfinderVis is a web-based visualization tool that demonstrates the functional
 
 ## Video Demonstration
 
-Click on the image below to watch the video demonstration of PathfinderVis:
+![PathfinderVis Demonstration](media/example.gif)
 
-[![PathfinderVis Demonstration](path-to-your-thumbnail-image)](media/example.mp4)
-
-The video will guide you through the tool's functionalities and show you the algorithms at work.
-
+This animated demonstration showcases the PathfinderVis tool in action, highlighting its features and the visualization of the pathfinding algorithms.
 
 ## Getting Started
 
