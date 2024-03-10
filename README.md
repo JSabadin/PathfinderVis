@@ -22,3 +22,6 @@ To run PathfinderVis, ensure you have Docker installed and use the following com
 
 ```bash
 docker-compose up
+```
+
+After starting the application, open your web browser and visit http://127.0.0.1:8080/ to interact with PathfinderVis.
